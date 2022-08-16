@@ -5,10 +5,10 @@ import styled from 'styled-components';
 const Profile = () => {
   const navigate = useNavigate();
 
-  const logout = useCallback(() => {
+  const logout = () => {
     localStorage.clear();
     return navigate('/login');
-  }, [navigate]);
+  };
 
   useEffect(() => {
     if (!localStorage.getItem('status')) {
